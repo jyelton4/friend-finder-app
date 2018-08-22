@@ -8,7 +8,7 @@ var friends = require("./app/data/friends");
 
 //
 var app = express();
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 
 //
 app.use(express.static("public"));
@@ -22,6 +22,6 @@ require('./app/routing/htmlRoutes')(app);
 require('./app/routing/apiRoutes')(app, friends.appData);
 
 //
-app.listen(process.env.PORT || PORT, function() {
+app.listen(PORT, function() {
     console.log("Listening on port 8080...");
 });
