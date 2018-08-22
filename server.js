@@ -22,6 +22,6 @@ require('./app/routing/htmlRoutes')(app);
 require('./app/routing/apiRoutes')(app, friends.appData);
 
 //
-app.listen(PORT, function() {
+app.listen(process.env.PORT || PORT, function() {
     console.log("Listening on port 8080...");
 });

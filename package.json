@@ -25,5 +25,8 @@
     "express-handlebars": "^3.0.0",
     "materialize-css": "^0.100.2",
     "path": "^0.12.7"
+  }, 
+  "engines": {
+    "node": "10.0.0"
   }
 }
